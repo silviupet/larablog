@@ -18,7 +18,8 @@ class FrontEndController extends Controller
     public function index()
     {
         $posts = Post::orderBy('created_at','desc')->get();
-        return view('index')->with('title', Setting::first()->site_name)
+        return view(
+            'index')->with('title', Setting::first()->site_name)
             ->with('categories', Category::all())
             ->with('posts', $posts)
             ->with('settings',Setting::first());

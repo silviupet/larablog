@@ -24,3 +24,4 @@ class HomeController extends Controller
                     ->with('categories_count', Category::all()->count());
     }
 }
+//inseamna ca trimit in view niste variabile - nume si valoare
